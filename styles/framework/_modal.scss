@@ -1,0 +1,15 @@
+.nag-modal {
+	z-index: 1000;
+	background-color: $color-white;
+}
+
+.nag-modal.auto-center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+.nag-modal-content {
+	height: 100%;
+	width: 100%;
+}

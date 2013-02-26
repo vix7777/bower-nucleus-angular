@@ -1,0 +1,47 @@
+/* tree system */
+.nag-tree > ul,
+.tree > ul {
+	padding: 0;
+	list-style: none;
+}
+
+.tree {
+  cursor: pointer;
+}
+
+.nag-tree .tree > .tree-label:before,
+.nag-tree .tree.expanded > .tree-label:before {
+	font-family: 'nag-icon-fonts';
+	font-style: normal;
+	font-size: 11px;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.tree > .tree-label {
+  padding-left: 14px;
+  padding-right: 1px;
+}
+
+.tree > .tree-label:before {
+	content: "\e008";
+}
+
+.tree.expanded > .tree-label:before {
+	content: "\e009";
+}
+
+.tree .node {
+
+  padding-left: 14px;
+}
+
+.tree > ul.node {
+  display: none;
+}
+
+.tree.expanded > ul.node {
+  display: block;
+}

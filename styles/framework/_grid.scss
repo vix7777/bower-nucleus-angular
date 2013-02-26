@@ -1,0 +1,159 @@
+.nag-grid ul,
+.nag-grid li {
+	padding:  0;
+	margin:  0;
+}
+
+.nag-grid-header-data-cell,
+.nag-grid-data-cell,
+.nag-grid-actions {
+	display: inline-block;
+}
+
+.nag-grid {
+	display: block;
+	border: 1px solid $color-black;
+	min-height: 75px;
+}
+
+.nag-grid .grid-header {
+	@include user-select('none');
+	padding: 5px;
+}
+
+.nag-grid .data-header > li,
+.nag-grid .record-item > li {
+	height: 16px;
+}
+
+.nag-grid .data-header {
+	@include user-select('none');
+}
+
+.nag-grid .grid-header .settings {
+	display: inline-block;
+	float: right;
+	cursor: pointer;
+}
+
+.nag-grid .grid-header .settings:after {
+	content: "\e007";
+}
+
+.nag-grid .data {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+}
+
+.nag-grid .data.selectable {
+	@include user-select('none');
+	cursor: pointer;
+}
+
+.nag-grid .data .data-header [class*="sort-"]:after,
+.nag-grid .grid-header .settings:after,
+.nag-grid .data .data-header .sortable:after {
+	font-family: 'nag-icon-fonts';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	float: right;
+}
+
+.nag-grid .data .data-header .sort-desc:after {
+	content: "\e004";
+}
+
+.nag-grid .data .data-header .sort-asc:after {
+	content: "\e005";
+}
+
+.nag-grid .data .data-header .sortable {
+	cursor: pointer;
+}
+
+.nag-grid .data .data-header .sortable:not([class*="sort-"]):after {
+	content: "\e006";
+}
+
+.nag-grid .data .data-header .text {
+	display: inline-block;
+}
+
+.nag-grid .data > ul li {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.nag-grid .data > ul {
+	border-top: 1px solid black;
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.nag-grid .data > ul:last-of-type {
+	border-bottom: 1px solid black;
+}
+
+.nag-grid .data > ul li {
+	border-right: 1px solid black;
+	padding: 3px;
+}
+
+.nag-grid .data > ul li:last-child {
+	border-right:  none;
+}
+
+.nag-grid .controls a,
+.nag-grid .controls span[class^="font-icon-"],
+.nag-grid .controls span,
+.nag-grid .controls input {
+	vertical-align: middle;
+	text-decoration: none;
+	color: $color-black;
+}
+
+.nag-grid .nag-grid-footer {
+	padding: 6px 5px 5px 5px;
+}
+
+.nag-grid .grid-wrapper {
+	position: relative;
+	box-sizing: border-box;
+}
+
+.nag-grid .loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.nag-grid .loading .text {
+	@include border-radius(10px);
+	margin: 20px auto 0 auto;
+	width: 53px;
+	padding: 10px;
+	background-color: $color_white;
+
+}
+
+.nag-grid .settings-widget {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border: 1px solid $color-black;
+	background-color: $color-white;
+	z-index: 1001; //make sure it appears above the jquery ui resize widgets
+}
+
+.nag-grid .ui-resizable-e {
+	right: 0;
+}
