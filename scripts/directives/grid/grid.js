@@ -23,8 +23,6 @@ nucleusAngular.directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper
 					scope.options = nagDefaults.getGridOptions(scope.options);
 
 					var html = $(nagHelper.getAsyncTemplate(scope.options.templateUrl));
-					console.log(html);
-			//return;
 					$(element).append($compile(html)(scope));
 
 					$(element).addClass('nag-grid');
@@ -32,16 +30,17 @@ nucleusAngular.directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper
 				post: function(scope, element, attributes) {
 					var autoResizeGridColumns, resizableGrid, getData;
 					autoResizeGridColumns = function() {
+            var minWidth;
 						var columnCount = $(element).find('.data .data-header .cell').length;
 
-						for(var x = 1; x <= columnCount; x += 1) {
+						for(var x = 0; x <= columnCount; x += 1) {
 							var property = $(element).find('.data .data-header .cell:eq(' + x + ')').data('property');
 
 							if(property) {
 								var columnModel = ObjectArray.getObjectByPropertyValue(scope.options.columnModel, 'property', property);
 
 								if(columnModel.width === 0) {
-									var minWidth = (scope.options.minColumnWidth >= columnModel.minWidth ? scope.options.minColumnWidth : columnModel.minWidth);
+									minWidth = (scope.options.minColumnWidth >= columnModel.minWidth ? scope.options.minColumnWidth : columnModel.minWidth);
 									var maxWidth = (scope.options.maxColumnWidth >= columnModel.maxWidth ? scope.options.maxColumnWidth : columnModel.maxWidth);
 									var $cells = $(element).find('.data .row .cell.' + columnModel.property);
 
@@ -57,7 +56,16 @@ nucleusAngular.directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper
 								}
 
 								$(element).find('.data .row .cell.' + columnModel.property).width(minWidth);
-							}
+							} else if ($(element).find('.data .data-header .cell:eq(' + x + ')').hasClass('grid-actions-column')) {
+                minWidth = 0;
+                var $cells = $(element).find('.data .row .cell.grid-actions-column');
+
+                $.each($cells, function(key, value) {
+                  minWidth = (minWidth < $(value).width() ? $(value).width() : minWidth);
+                });
+
+								$(element).find('.data .row .cell.grid-actions-column').width(minWidth);
+              }
 						}
 
 						resizableGrid();

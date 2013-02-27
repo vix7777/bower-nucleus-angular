@@ -37,7 +37,7 @@
 }
 
 .nag-grid .grid-header .settings:after {
-	content: "\e007";
+	content: "\e008";
 }
 
 .nag-grid .data {
@@ -61,6 +61,8 @@
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	float: right;
+  width: 16px;
+  text-align: center;
 }
 
 .nag-grid .data .data-header .sort-desc:after {
@@ -81,6 +83,7 @@
 
 .nag-grid .data .data-header .text {
 	display: inline-block;
+  padding-right: 5px;
 }
 
 .nag-grid .data > ul li {
