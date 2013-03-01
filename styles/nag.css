@@ -1,295 +1,193 @@
 /* entered colors */
 /* dynamically generated colors */
 /* */
-/* line 1, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_classes.scss */
 .hide {
-  display: none;
-}
+  display: none; }
 
 @font-face {
   font-family: 'nag-icon-fonts';
   src: url("../fonts/icon-font.eot");
   src: url("../fonts/icon-font.eot?#iefix") format("embedded-opentype"), url("../fonts/icon-font.svg#entypo") format("svg"), url("../fonts/icon-font.woff") format("woff"), url("../fonts/icon-font.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 /* Use the following CSS code if you want to have a class per icon */
-/* line 14, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 [class^="font-icon-"]:before, [class*=" font-icon-"]:before {
   font-family: 'nag-icon-fonts';
   font-style: normal;
   speak: none;
   font-weight: normal;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
-/* line 23, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 [class^="font-icon-"]:after, [class*=" font-icon-"]:after {
   font-family: 'nag-icon-fonts';
   font-style: normal;
   speak: none;
   font-weight: normal;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
-/* line 32, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-previous:before {
-  content: "\e000";
-}
+  content: "\e000"; }
 
-/* line 35, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-first:before {
-  content: "\e001";
-}
+  content: "\e001"; }
 
-/* line 38, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-last:before {
-  content: "\e002";
-}
+  content: "\e002"; }
 
-/* line 41, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-next:before {
-  content: "\e003";
-}
+  content: "\e003"; }
 
-/* line 44, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-circle-arrow-down:before {
-  content: "\e004";
-}
+  content: "\e004"; }
 
-/* line 47, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-circle-arrow-up:before {
-  content: "\e005";
-}
+  content: "\e005"; }
 
-/* line 50, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-double-arrow:before {
-  content: "\e006";
-}
+  content: "\e006"; }
 
-/* line 53, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-setting-knobs:before {
-  content: "\e007";
-}
+  content: "\e007"; }
 
-/* line 56, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-left:before {
-  content: "\e008";
-}
+  content: "\e008"; }
 
-/* line 59, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-down:before {
-  content: "\e009";
-}
+  content: "\e009"; }
 
-/* line 62, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-right:before {
-  content: "\e00a";
-}
+  content: "\e00a"; }
 
-/* line 65, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-up:before {
-  content: "\e00b";
-}
+  content: "\e00b"; }
 
-/* line 69, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-previous-after:after {
-  content: "\e000";
-}
+  content: "\e000"; }
 
-/* line 72, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-first-after:after {
-  content: "\e001";
-}
+  content: "\e001"; }
 
-/* line 75, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-last-after:after {
-  content: "\e002";
-}
+  content: "\e002"; }
 
-/* line 78, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-next-after:after {
-  content: "\e003";
-}
+  content: "\e003"; }
 
-/* line 81, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-circle-arrow-down-after:after {
-  content: "\e004";
-}
+  content: "\e004"; }
 
-/* line 84, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-circle-arrow-up-after:after {
-  content: "\e005";
-}
+  content: "\e005"; }
 
-/* line 87, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-double-arrow-after:after {
-  content: "\e006";
-}
+  content: "\e006"; }
 
-/* line 90, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-setting-knobs-after:after {
-  content: "\e007";
-}
+  content: "\e007"; }
 
-/* line 93, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-left-after:after {
-  content: "\e008";
-}
+  content: "\e008"; }
 
-/* line 96, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-down-after:after {
-  content: "\e009";
-}
+  content: "\e009"; }
 
-/* line 99, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-right-after:after {
-  content: "\e00a";
-}
+  content: "\e00a"; }
 
-/* line 102, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_icon-fonts.scss */
 .font-icon-small-arrow-up-after:after {
-  content: "\e00b";
-}
+  content: "\e00b"; }
 
 /* tree system */
-/* line 3, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
-.nag-tree > ul,
-.tree > ul {
+.nag-tree > ul, .tree > ul {
   padding: 0;
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 8, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 13, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
-.nag-tree .tree > .tree-label:before,
-.nag-tree .tree.expanded > .tree-label:before {
+.nag-tree .tree > .tree-label:before, .nag-tree .tree.expanded > .tree-label:before {
   font-family: 'nag-icon-fonts';
   font-style: normal;
   font-size: 17px;
   speak: none;
   font-weight: normal;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
-/* line 23, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree > .tree-label {
   padding-left: 14px;
-  padding-right: 1px;
-}
+  padding-right: 1px; }
 
-/* line 28, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree > .tree-label:before {
-  content: "\e00a";
-}
+  content: "\e00a"; }
 
-/* line 32, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree.expanded > .tree-label:before {
-  content: "\e009";
-}
+  content: "\e009"; }
 
-/* line 36, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree .node {
-  padding-left: 14px;
-}
+  padding-left: 14px; }
 
-/* line 41, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree > ul.node {
-  display: none;
-}
+  display: none; }
 
-/* line 45, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tree.scss */
 .tree.expanded > ul.node {
-  display: block;
-}
+  display: block; }
 
-/* line 2, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
-.nag-grid ul,
-.nag-grid li {
+.nag-grid ul, .nag-grid li {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
-/* line 9, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
-.nag-grid-header-data-cell,
-.nag-grid-data-cell,
-.nag-grid-actions {
-  display: inline-block;
-}
+.nag-grid-header-data-cell, .nag-grid-data-cell, .nag-grid-actions {
+  display: inline-block; }
 
-/* line 13, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid {
   display: block;
   border: 1px solid black;
-  min-height: 75px;
-}
+  min-height: 75px; }
 
-/* line 19, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .grid-header {
   -webkit-user-select: "none";
   -moz-user-select: "none";
   -ms-user-select: "none";
   -o-user-select: "none";
   user-select: "none";
-  padding: 5px;
-}
+  padding: 5px; }
 
-/* line 25, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
-.nag-grid .data-header > li,
-.nag-grid .record-item > li {
-  height: 16px;
-}
+.nag-grid .data-header > li, .nag-grid .record-item > li {
+  height: 16px; }
 
-/* line 29, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data-header {
   -webkit-user-select: "none";
   -moz-user-select: "none";
   -ms-user-select: "none";
   -o-user-select: "none";
-  user-select: "none";
-}
+  user-select: "none"; }
 
-/* line 33, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .grid-header .settings {
   display: inline-block;
   float: right;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 39, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .grid-header .settings:after {
-  content: "\e008";
-}
+  content: "\e007"; }
 
-/* line 43, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data {
   position: relative;
   overflow: auto;
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 49, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data.selectable {
   -webkit-user-select: "none";
   -moz-user-select: "none";
   -ms-user-select: "none";
   -o-user-select: "none";
   user-select: "none";
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 56, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
-.nag-grid .data .data-header [class*="sort-"]:after,
-.nag-grid .grid-header .settings:after,
-.nag-grid .data .data-header .sortable:after {
+.nag-grid .data .data-header [class*="sort-"]:after, .nag-grid .grid-header .settings:after, .nag-grid .data .data-header .sortable:after {
   font-family: 'nag-icon-fonts';
   font-style: normal;
   speak: none;
@@ -298,98 +196,65 @@
   -webkit-font-smoothing: antialiased;
   float: right;
   width: 16px;
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 68, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data .data-header .sort-desc:after {
-  content: "\e004";
-}
+  content: "\e004"; }
 
-/* line 72, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data .data-header .sort-asc:after {
-  content: "\e005";
-}
+  content: "\e005"; }
 
-/* line 76, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data .data-header .sortable {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 80, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data .data-header .sortable:not([class*="sort-"]):after {
-  content: "\e006";
-}
+  content: "\e006"; }
 
-/* line 84, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data .data-header .text {
   display: inline-block;
-  padding-right: 5px;
-}
+  padding-right: 5px; }
 
-/* line 89, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data > ul li {
   position: relative;
   display: inline-block;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-/* line 95, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data > ul {
   border-top: 1px solid black;
   display: inline-block;
   white-space: nowrap;
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 102, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data > ul:last-of-type {
-  border-bottom: 1px solid black;
-}
+  border-bottom: 1px solid black; }
 
-/* line 106, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data > ul li {
   border-right: 1px solid black;
-  padding: 3px;
-}
+  padding: 3px; }
 
-/* line 111, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .data > ul li:last-child {
-  border-right: none;
-}
+  border-right: none; }
 
-/* line 118, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
-.nag-grid .controls a,
-.nag-grid .controls span[class^="font-icon-"],
-.nag-grid .controls span,
-.nag-grid .controls input {
+.nag-grid .controls a, .nag-grid .controls span[class^="font-icon-"], .nag-grid .controls span, .nag-grid .controls input {
   vertical-align: middle;
   text-decoration: none;
-  color: black;
-}
+  color: black; }
 
-/* line 124, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .nag-grid-footer {
-  padding: 6px 5px 5px 5px;
-}
+  padding: 6px 5px 5px 5px; }
 
-/* line 128, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .grid-wrapper {
   position: relative;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 133, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .loading {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  background-color: rgba(0, 0, 0, 0.5); }
 
-/* line 142, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .loading .text {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -399,98 +264,68 @@
   margin: 20px auto 0 auto;
   width: 53px;
   padding: 10px;
-  background-color: white;
-}
+  background-color: white; }
 
-/* line 151, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .settings-widget {
   position: absolute;
   top: 5px;
   right: 5px;
   border: 1px solid black;
   background-color: white;
-  z-index: 1001;
-}
+  z-index: 1001; }
 
-/* line 160, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_grid.scss */
 .nag-grid .ui-resizable-e {
-  right: 0;
-}
+  right: 0; }
 
-/* line 1, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .nag-tabs > .tabs {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 6, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .nag-tabs > .tabs li {
   padding: 3px;
   display: inline-block;
   border: 1px solid #e3e3e3;
   border-bottom: none;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 14, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .nag-tabs > .tabs li.active {
-  background-color: #e3e3e3;
-}
+  background-color: #e3e3e3; }
 
-/* line 18, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .nag-tabs > .tabs li a:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-/* line 22, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .nag-tabs .tab-content-item {
-  display: none;
-}
+  display: none; }
 
-/* line 26, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .nag-tabs .tab-content-item.active {
   border-top: 1px solid #e3e3e3;
-  display: block;
-}
+  display: block; }
 
-/* line 31, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tabs.scss */
 .clearfix {
-  *zoom: 1;
-}
-/* line 38, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  *zoom: 1; }
 .clearfix:after {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
-/* line 1, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_notify.scss */
 .jg-notify {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10000;
-  display: inline-block;
-}
+  display: inline-block; }
 
-/* line 9, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_notify.scss */
 .jg-notify.absolute {
-  position: absolute;
-}
+  position: absolute; }
 
-/* line 1, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tooltip.scss */
 .nag-tooltip .handle {
-  display: inine-block;
-}
+  display: inine-block; }
 
-/* line 5, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_tooltip.scss */
 .nag-tooltip .content {
   padding: 5px;
   background: white;
-  border: 1px solid black;
-}
+  border: 1px solid black; }
 
-/* line 1, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_overlay.scss */
 .nag-site-overlay {
   position: fixed;
   top: 0;
@@ -499,97 +334,68 @@
   width: 100%;
   background-color: black;
   opacity: .5;
-  z-index: 999;
-}
+  z-index: 999; }
 
-/* line 1, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_modal.scss */
 .nag-modal {
   z-index: 1000;
-  background-color: white;
-}
+  background-color: white; }
 
-/* line 6, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_modal.scss */
 .nag-modal.auto-center {
   position: fixed;
   top: 50%;
-  left: 50%;
-}
+  left: 50%; }
 
-/* line 12, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_modal.scss */
 .nag-modal-content {
   height: 100%;
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 2, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-outer {
-  position: relative;
-}
+  position: relative; }
 
-/* line 7, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-inner {
-  position: relative;
-}
+  position: relative; }
 
-/* line 12, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-tag-container {
   position: absolute;
   padding: 3px;
   float: left;
-  z-index: 2;
-}
+  z-index: 2; }
 
-/* line 20, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-tag-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  float: left;
-}
+  float: left; }
 
-/* line 28, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-tag {
   display: inline-block;
   margin-right: 6px;
   float: left;
-  position: relative;
-}
+  position: relative; }
 
-/* line 36, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-tag-text {
   display: inline-block;
   background-color: #b8d7eb;
   border: 1px solid #5f868e;
   border-radius: 2px;
-  padding: 0 2px;
-}
+  padding: 0 2px; }
 
-/* line 44, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-tag.selected .nag-extend-text-tag-text {
-  border: 1px solid red;
-}
+  border: 1px solid red; }
 
-/* line 49, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-tag-remove {
   position: relative;
   left: 1px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 57, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
-.nag-extend-text ul,
-.nag-extend-text li {
+.nag-extend-text ul, .nag-extend-text li {
   margin: 0;
-  padding: 1px;
-}
+  padding: 1px; }
 
-/* line 63, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text ul {
   list-style: none;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 69, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-textarea {
   resize: none;
   position: absolute;
@@ -603,19 +409,14 @@
   /* todo: convert to sass mixin */
   appearance: textfield;
   -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-}
+  -webkit-appearance: textfield; }
 
-/* line 86, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-options {
   position: absolute;
   border: 1px solid black;
   box-sizing: border-box;
   background-color: white;
-  z-index: 1;
-}
+  z-index: 1; }
 
-/* line 95, /repositories/nucleus-angular/web/components/nucleus-angular/styles/framework/_extend-text.scss */
 .nag-extend-text-option-focus {
-  background: #E1E9F6;
-}
+  background: #E1E9F6; }

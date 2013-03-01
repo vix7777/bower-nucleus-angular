@@ -1,6 +1,15 @@
 {
   "name": "nucleus-angular",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "gitHead": "50bbe6194174448852a03bbbd101b6dd77ad1228",
+  "readme": "# Bower Nucleus Angular #\n\nThis is a bower repository for the Nucleus Angular UI Components.  Documentation will be added once it reaches version 0.1.0.\n",
+  "readmeFilename": "README.md",
+  "_id": "nucleus-angular@0.0.2",
+  "description": "This is a bower repository for the Nucleus Angular UI Components.  Documentation will be added once it reaches version 0.1.0.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryanzec/bower-nucleus-angular.git"
+  }
 }
