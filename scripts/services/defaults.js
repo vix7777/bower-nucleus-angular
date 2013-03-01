@@ -107,7 +107,8 @@ nucleusAngular.service('nagDefaults', [function() {
 				//todo: refactor this into internal method
 				var variableValue = $(element).find('textarea').val();
 				this.options.autoCompleteOptions.variableCache = variableValue;
-				url += '?' + this.options.autoCompleteOptions.variable + '=' + this.options.autoCompleteOptions.formatVariable(variableValue);
+        url += (url.indexOf('?') === -1 ? '?' : '&');
+				url += this.options.autoCompleteOptions.variable + '=' + this.options.autoCompleteOptions.formatVariable(variableValue);
 
 				return url + '&callback=JSON_CALLBACK';
 			},
