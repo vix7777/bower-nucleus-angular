@@ -1,13 +1,12 @@
-/**
- * todo: add parameter to how many beginning and end characters to display
- */
 nucleusAngular.filter('nagEllipse', function(){
-	return function(text, minLength){
+	return function(text, minLength, beginningShow, endingShow){
 		minLength = minLength || 0;
+    beginningShow = beginningShow || 5;
+    endingShow = (endingShow || 8) * -1;
 		if(text.length < minLength) {
 			return text;
 		} else {
-			return text.substr(0, 5) + '...' + text.substr(-8);
+			return text.substr(0, beginningShow) + '...' + text.substr(endingShow);
 		}
 
 	};

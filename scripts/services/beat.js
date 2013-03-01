@@ -1,7 +1,3 @@
-/**
- * todo:
- * implement overwrite
- */
 nucleusAngular.service('nagBeat', ['$timeout', function($timeout) {
 	this.add = function(name, callback, delay, options) {
 		var self = this;
@@ -12,6 +8,10 @@ nucleusAngular.service('nagBeat', ['$timeout', function($timeout) {
 			//this will will let you remove and create a new beat under the name if it already exists
 			overwrite: false
 		}, options);
+
+    if(options.overwrite === true) {
+      this.remove(name);
+    }
 
 		$('body').data(name, $timeout(function() {
 			callback();

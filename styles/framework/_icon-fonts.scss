@@ -1,17 +1,16 @@
 @font-face {
 	font-family: 'nag-icon-fonts';
-	src:url('../fonts/icon-font.eot');
-	src:url('../fonts/icon-font.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icon-font.svg#entypo') format('svg'),
-		url('../fonts/icon-font.woff') format('woff'),
-		url('../fonts/icon-font.ttf') format('truetype');
+	src:url('../fonts/nag-icon-font.eot');
+	src:url('../fonts/nag-icon-font.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nag-icon-font.svg#entypo') format('svg'),
+		url('../fonts/nag-icon-font.woff') format('woff'),
+		url('../fonts/nag-icon-font.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
-//todo: class should be nag-font-icon not font-icon to avoid clashing with other icon fonts that might be present
 /* Use the following CSS code if you want to have a class per icon */
-[class^="font-icon-"]:before, [class*=" font-icon-"]:before {
+[class^="nag-icon-font-"]:before, [class*=" nag-icon-font-"]:before {
 	font-family: 'nag-icon-fonts';
 	font-style: normal;
 	speak: none;
@@ -20,7 +19,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-[class^="font-icon-"]:after, [class*=" font-icon-"]:after {
+[class^="nag-icon-font-"]:after, [class*=" nag-icon-font-"]:after {
 	font-family: 'nag-icon-fonts';
 	font-style: normal;
 	speak: none;
@@ -29,76 +28,76 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.font-icon-previous:before {
+.nag-icon-font-previous:before {
 	content: "\e000";
 }
-.font-icon-first:before {
+.nag-icon-font-first:before {
 	content: "\e001";
 }
-.font-icon-last:before {
+.nag-icon-font-last:before {
 	content: "\e002";
 }
-.font-icon-next:before {
+.nag-icon-font-next:before {
 	content: "\e003";
 }
-.font-icon-circle-arrow-down:before {
+.nag-icon-font-circle-arrow-down:before {
 	content: "\e004";
 }
-.font-icon-circle-arrow-up:before {
+.nag-icon-font-circle-arrow-up:before {
 	content: "\e005";
 }
-.font-icon-double-arrow:before {
+.nag-icon-font-double-arrow:before {
 	content: "\e006";
 }
-.font-icon-setting-knobs:before {
+.nag-icon-font-setting-knobs:before {
 	content: "\e007";
 }
-.font-icon-small-arrow-left:before {
+.nag-icon-font-small-arrow-left:before {
 	content: "\e008";
 }
-.font-icon-small-arrow-down:before {
+.nag-icon-font-small-arrow-down:before {
 	content: "\e009";
 }
-.font-icon-small-arrow-right:before {
+.nag-icon-font-small-arrow-right:before {
 	content: "\e00a";
 }
-.font-icon-small-arrow-up:before {
+.nag-icon-font-small-arrow-up:before {
 	content: "\e00b";
 }
 
-.font-icon-previous-after:after {
+.nag-icon-font-previous-after:after {
 	content: "\e000";
 }
-.font-icon-first-after:after {
+.nag-icon-font-first-after:after {
 	content: "\e001";
 }
-.font-icon-last-after:after {
+.nag-icon-font-last-after:after {
 	content: "\e002";
 }
-.font-icon-next-after:after {
+.nag-icon-font-next-after:after {
 	content: "\e003";
 }
-.font-icon-circle-arrow-down-after:after {
+.nag-icon-font-circle-arrow-down-after:after {
 	content: "\e004";
 }
-.font-icon-circle-arrow-up-after:after {
+.nag-icon-font-circle-arrow-up-after:after {
 	content: "\e005";
 }
-.font-icon-double-arrow-after:after {
+.nag-icon-font-double-arrow-after:after {
 	content: "\e006";
 }
-.font-icon-setting-knobs-after:after {
+.nag-icon-font-setting-knobs-after:after {
 	content: "\e007";
 }
-.font-icon-small-arrow-left-after:after {
+.nag-icon-font-small-arrow-left-after:after {
 	content: "\e008";
 }
-.font-icon-small-arrow-down-after:after {
+.nag-icon-font-small-arrow-down-after:after {
 	content: "\e009";
 }
-.font-icon-small-arrow-right-after:after {
+.nag-icon-font-small-arrow-right-after:after {
 	content: "\e00a";
 }
-.font-icon-small-arrow-up-after:after {
+.nag-icon-font-small-arrow-up-after:after {
 	content: "\e00b";
 }

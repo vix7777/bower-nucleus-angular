@@ -8,7 +8,7 @@ nucleusAngular.service('nagNotify', ['nagHelper', 'nagBeat', function(nagHelper,
 	this.notify = function(options) {
 		var id, classes, $appendTo, $notifyDom, width, height, containerWidth, containerHeight;
 		id = nagHelper.generateId('nag-notify');
-		classes = 'jg-notify';
+		classes = 'nag-notify';
 		
 		options = angular.extend({
 			content: null,

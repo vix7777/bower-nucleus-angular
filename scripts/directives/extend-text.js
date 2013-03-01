@@ -1,7 +1,3 @@
-/**
- * todo: handle no results gracefully
- * todo: bug: this should work with auto focus but it does not
- */
 nucleusAngular.directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$compile', 'nagHelper', 'nagDefaults', function($timeout, $http, nagBeat, $compile, nagHelper, nagDefaults){
 	return {
 		restrict: 'A',
@@ -13,14 +9,15 @@ nucleusAngular.directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$com
 			return {
 				pre: function(scope, element, attributes) {
 					scope.options = nagDefaults.getExtendTextOptions(scope.options);
-					//todo: figure out if there is a way to using $http instead of jQuery $.ajax with async false without having the render of initial load
-					/*$http.get(template, {cache: $templateCache}).success(function(html) {
-						element.append($compile(html)(scope));
-					});*/
 
 					var template = $(nagHelper.getAsyncTemplate(scope.options.templateUrl));
 					template.find('input[type="hidden"]').attr('ng-bind', scope.options.ngModel);
-					element.append($compile(template)(scope));
+
+          if(scope.options.autoFocus === true) {
+					  template.find('textarea').attr('nag-auto-focus', '');
+          }
+
+          element.append($compile(template)(scope));
 				},
 				post: function(scope, element, attributes) {
 					var addValue, setValue, updateTextAreaPadding, updateAutoCompletePosition, displayAutoComplete, hideAutoComplete, setElementHeight, getData, originalPadding;
@@ -91,7 +88,7 @@ nucleusAngular.directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$com
 					};
 
 					getData = function() {
-						var url = scope.options.autoCompleteOptions.generateDataUrl.apply(scope, [element]);
+						var url = scope.options.autoCompleteOptions.generateDataUrl.apply(scope, []);
 						scope.options.autoCompleteOptions.loadingData = true;
 						$http({method: scope.options.autoCompleteOptions.remoteDataMethod, url: url}).
 						success(function(data, status, headers, config) {
@@ -134,7 +131,6 @@ nucleusAngular.directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$com
 								$(element).find('textarea').focus();
 							}
 
-							// /todo: implement as something on the array object prototype maybe
 							var removeKey = ObjectArray.getKeyByPropertyValue(scope.options.data, 'value', value);
 							scope.options.data.splice(removeKey, 1);
 						} else {
@@ -162,6 +158,8 @@ nucleusAngular.directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$com
 					scope.getTextAreaValue = function() {
 						return $(element).find('textarea').val();
 					};
+
+          this.getTextAreaValue = scope.getTextAreaValue;
 
 					scope.isSelectedTag = function(key) {
 						return key === scope.options.tagOptions.selectedTagIndex;
@@ -272,7 +270,8 @@ nucleusAngular.directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$com
 										nagBeat.add(beatName, function() {
 											getData();
 										}, scope.options.autoCompleteOptions.searchDelay, {
-											once: true
+											once: true,
+                      overwrite: true
 										});
 									}
 								}

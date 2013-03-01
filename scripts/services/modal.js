@@ -1,6 +1,3 @@
-/**
- * todo:
- */
 nucleusAngular.service('nagModal', ['nagHelper', 'nagSiteOverlay', function(nagHelper, nagSiteOverlay) {
 	var self = this;
 	var content = '';

@@ -10,11 +10,6 @@ nucleusAngular.directive('nagTree', ['$compile', 'nagHelper', 'nagDefaults', fun
 					scope.options = nagDefaults.getTreeOptions(scope.options);
 					var template = $(nagHelper.getTemplateString(scope.options));
 
-
-					//todo: convert to using dynamic event dorective in template
-					//template.find('.tree').attr('ng-click', 'treeClick($event)');
-					//template.find('.node').attr('ng-click', 'nodeClick($event, date)');
-
 					$(element).append($compile(template)(scope));
 					$(element).addClass('nag-tree');
 				},

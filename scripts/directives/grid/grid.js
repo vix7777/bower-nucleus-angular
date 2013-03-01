@@ -114,8 +114,7 @@ nucleusAngular.directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper
 					getData = function() {
 						scope.toggleLoadingDisplay();
 						$timeout(function() {
-							//todo: refactor generateDataUrl to use scope the the this with apply()
-							$http({method: scope.options.remoteDataMethod, url: scope.options.generateDataUrl(scope)}). //todo: think: change this to apply seting this to scope???
+							$http({method: scope.options.remoteDataMethod, url: scope.options.generateDataUrl.apply(scope, [])}).
 							success(function(data, status, headers, config) {
 								if(angular.isObject(data)) {
 									scope.options.data = data.data.data;
@@ -265,7 +264,6 @@ nucleusAngular.directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper
 								$(element).find('.data .data-header .' + sortKey + ' .sortable').addClass(fontIconClass);
 							}
 
-							//todo - think - should sorting reset the page?
 							if(scope.options.currentPage !== 1) {
 								scope.options.currentPage = 1;
 							} else {

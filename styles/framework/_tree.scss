@@ -9,15 +9,20 @@
   cursor: pointer;
 }
 
+.tree .leaf-value {
+  padding-left: 14px;
+}
+
 .nag-tree .tree > .tree-label:before,
 .nag-tree .tree.expanded > .tree-label:before {
 	font-family: 'nag-icon-fonts';
 	font-style: normal;
-	font-size: 17px;
 	speak: none;
 	font-weight: normal;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+  width: 10px;
+  display: inline-block;
 }
 
 .tree > .tree-label {

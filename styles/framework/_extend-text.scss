@@ -76,11 +76,6 @@
 	white-space: nowrap;
 	height: inherit;
 	box-sizing: border-box;
-
-	/* todo: convert to sass mixin */
-	appearance: textfield;
-	-moz-appearance: textfield;
-	-webkit-appearance: textfield;
 }
 
 .nag-extend-text-options {

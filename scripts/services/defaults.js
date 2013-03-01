@@ -100,6 +100,7 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 			preventSubmitOnEnter: true,
 			data: [],
 			ngModel: null,
+      autoFocus: true,
 			templateUrl: 'extend-text.html',
 			template: null
 		},
@@ -124,11 +125,10 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 			options: [],
 			useFilter: null, //todo
 			selectedOptionIndex: 0,
-			generateDataUrl: function(element) {
+			generateDataUrl: function() {
 				var url = this.options.autoCompleteOptions.url;
-				//todo: refactor this into internal method
-				var variableValue = $(element).find('textarea').val();
-				this.options.autoCompleteOptions.variableCache = variableValue;
+				var variableValue = this.getTextAreaValue();
+				this.options.autoCompleteOptions.variableCache = this.getTextAreaValue();
         url += (url.indexOf('?') === -1 ? '?' : '&');
 				url += this.options.autoCompleteOptions.variable + '=' + this.options.autoCompleteOptions.formatVariable(variableValue);
 
