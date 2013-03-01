@@ -1,10 +1,11 @@
-nucleusAngular.service('nagHelper', ['$templateCache', function($templateCache) {
+nucleusAngular.service('nagHelper', ['$templateCache', 'nagDefaults', function($templateCache, nagDefaults) {
 	this.getAsyncTemplate = function(templateUrl) {
 		//todo: figure out if there is a way to using $http instead of jQuery $.ajax with async false without having the render of initial load
 		/*$http.get(template, {cache: $templateCache}).success(function(html) {
 			element.append($compile(html)(scope));
 		});*/
 
+    templateUrl = this.resolveTemplatePath(templateUrl);
 		var html = $templateCache.get(templateUrl);
 
 		if(!html) {
@@ -36,4 +37,10 @@ nucleusAngular.service('nagHelper', ['$templateCache', function($templateCache) 
 			return '';
 		}
 	}
+
+  this.resolveTemplatePath = function(templatePath) {
+    return (templatePath.indexOf('./') !== 0 && templatePath.indexOf('/') !== 0
+    ? nagDefaults.getRootTemplatePath() + templatePath
+    : templatePath);
+  }
 }]);

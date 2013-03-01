@@ -1,6 +1,21 @@
-nucleusAngular.service('nagDefaults', [function() {
+nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
+  var rootTemplatePath;
+
+  //figure out the default root template path
+  try {
+    rootTemplatePath = $injector.get('nag.rootTemplatePath');
+  }
+  catch(exception) {
+    rootTemplatePath = './components/nucleus-angular/views/';
+  }
+
+  this.getRootTemplatePath = function() {
+    return rootTemplatePath;
+  }
+
 	var defaults = {
 		grid: {
+      rootTemplatePath: rootTemplatePath,
 			caption: null,
 			columnModel: [],
 			currentPage: 1,
@@ -18,17 +33,17 @@ nucleusAngular.service('nagDefaults', [function() {
 			rowSelectable: false,
 			rowSelectableCheckbox: true,
 			rowSelectionMode: 'row',
-			headerTemplateUrl: './components/nucleus-angular/views/grid/header.html',
+			headerTemplateUrl: 'grid/header.html',
 			headerTemplate: null,
-			footerTemplateUrl: './components/nucleus-angular/views/grid/footer.html',
+			footerTemplateUrl: 'grid/footer.html',
 			footerTemplate: null,
-			settingsTemplateUrl: './components/nucleus-angular/views/grid/settings.html',
+			settingsTemplateUrl: 'grid/settings.html',
 			settingsTemplate: null,
-			loadingTemplateUrl: './components/nucleus-angular/views/grid/loading.html',
+			loadingTemplateUrl: 'grid/loading.html',
 			loadingTemplate: null,
-			dataTemplateUrl: './components/nucleus-angular/views/grid/data.html',
+			dataTemplateUrl: 'grid/data.html',
 			dataTemplate: null,
-			actionsTemplateUrl: './components/nucleus-angular/views/grid/actions.html',
+			actionsTemplateUrl: 'grid/actions.html',
 			actionsTemplate: null,
 			rowShiftMultiSelect: false,
 			selected: [],
@@ -37,15 +52,16 @@ nucleusAngular.service('nagDefaults', [function() {
 			sortMulti: true,
 			sortProperty: null,
 			totalRecords: 0,
-			templateUrl: './components/nucleus-angular/views/grid/grid.html',
+			templateUrl: 'grid/grid.html',
 			template: null
 		},
 		gridColumnModel: {
+      rootTemplatePath: rootTemplatePath,
 			title: null,
 			property: null,
-			headerTemplateUrl: './components/nucleus-angular/views/grid/header-data-cell.html',
+			headerTemplateUrl: 'grid/header-data-cell.html',
 			headerTemplate: null,
-			templateUrl: './components/nucleus-angular/views/grid/data-cell.html',
+			templateUrl: 'grid/data-cell.html',
 			template: null,
 			display: true,
 			sortable: false,
@@ -58,38 +74,44 @@ nucleusAngular.service('nagDefaults', [function() {
 			cssHeaderClass: ''
 		},
 		tree: {
+      rootTemplatePath: rootTemplatePath,
 			treeClassName: 'tree1',
 			nodeClassName: 'node1',
-			templateUrl: './components/nucleus-angular/views/tree/tree.html',
+			templateUrl: 'tree/tree.html',
 			data: []
 		},
 		tooltip: {
+      rootTemplatePath: rootTemplatePath,
 			verticalPosition: 'bottom', //top, middle, bottom
 			horizontalPosition: 'right', //left, middle, right
 			sticky: false
 		},
 		tabs: {
+      rootTemplatePath: rootTemplatePath,
 			defaultTab: 1,
 			ajaxBackgroundLoading: false, //todo
 			url: null //todo
 		},
 		extendText: {
+      rootTemplatePath: rootTemplatePath,
 			hiddenInputName: null,
 			visibleInputName: null,
 			selectOnFocus: false, //whether or not to select the existing text in the input when focusing
 			preventSubmitOnEnter: true,
 			data: [],
 			ngModel: null,
-			templateUrl: './components/nucleus-angular/views/extend-text.html',
+			templateUrl: 'extend-text.html',
 			template: null
 		},
 		extendTextTagOptions: {
+      rootTemplatePath: rootTemplatePath,
 			enabled: false,
 			allowDuplicates: false,
 			selectedTagIndex: null,
 			doubleClickEdit: false
 		},
 		extendTextAutoCompleteOptions: {
+      rootTemplatePath: rootTemplatePath,
 			enabled: false,
 			display: false,
 			url: null,
@@ -134,15 +156,25 @@ nucleusAngular.service('nagDefaults', [function() {
 			},
 			filter: function(){} //todo
 		},
-		resizable: {},
-		expander: {}
+		resizable: {
+      rootTemplatePath: rootTemplatePath
+    },
+		expander: {
+      rootTemplatePath: rootTemplatePath
+    }
 	};
 
-	this.overrideDefaults = function(componentName, objectValues) {
-		if(angular.isObject(objectValues)) {
-			defaults[componentName] = angular.extend(defaults[componentName], objectValues);
-		}
-	}
+  //apply override defaults
+  try {
+    var defaultOverrides, overrideKeys, x;
+    defaultOverrides = $injector.get('nag.defaults');
+    overrideKeys = Object.keys(defaultOverrides);
+
+    for(x = 0; x < overrideKeys.length; x += 1) {
+      defaults[overrideKeys[x]] = angular.extend(defaults[overrideKeys[x]], defaultOverrides[overrideKeys[x]]);
+    }
+  }
+  catch(exception) {}
 
 	this.getGridOptions = function(options) {
 		var newOptions = angular.extend(defaults.grid, options);

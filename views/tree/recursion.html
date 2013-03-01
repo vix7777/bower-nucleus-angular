@@ -2,5 +2,5 @@
 	{{ data.name }}
 </span>
 <ul class="node">
-	<li ng-repeat="data in data.nodes" ng-class="{'tree': hasNodes(data), 'node': !hasNodes(data)}" nag-click="{'treeClick($event)': hasNodes(data), 'nodeClick($event, data)': !hasNodes(data)}" ng-include="'./components/nucleus-angular/views/tree/recursion.html'"></li>
+	<li ng-repeat="data in data.nodes" ng-class="{'tree': hasNodes(data), 'node': !hasNodes(data)}" nag-click="{'treeClick($event)': hasNodes(data), 'nodeClick($event, data)': !hasNodes(data)}" ng-include="options.rootTemplatePath + 'tree/recursion.html'"></li>
 </ul>
