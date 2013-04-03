@@ -1,6 +1,6 @@
 nucleusAngular.filter('nagEllipse', function(){
 	return function(text, minLength, beginningShow, endingShow){
-		minLength = minLength || 0;
+		minLength = minLength || 17;
     beginningShow = beginningShow || 5;
     endingShow = (endingShow || 8) * -1;
 		if(text.length < minLength) {

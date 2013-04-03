@@ -1,9 +1,9 @@
-.nag-tabs > .tabs {
+.nag-tabs .tabs {
 	margin: 0;
 	padding: 0;
 }
 
-.nag-tabs > .tabs li {
+.nag-tabs .tabs > li {
 	padding: 3px;
 	display: inline-block;
 	border: 1px solid rgb(227, 227, 227);
@@ -11,19 +11,19 @@
 	cursor: pointer;
 }
 
-.nag-tabs > .tabs li.active {
+.nag-tabs .tabs > li.active {
 	background-color: rgb(227, 227, 227);
 }
 
-.nag-tabs > .tabs li a:hover {
+.nag-tabs .tabs > li a:hover {
 	text-decoration: none;
 }
 
-.nag-tabs .tab-content-item {
+.nag-tabs .tab-content > .tab-content-item {
 	display: none;
 }
 
-.nag-tabs .tab-content-item.active {
+.nag-tabs .tab-content > .tab-content-item.active {
 	border-top: 1px solid rgb(227, 227, 227);
 	display: block;
 }

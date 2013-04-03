@@ -75,8 +75,6 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 		},
 		tree: {
       rootTemplatePath: rootTemplatePath,
-			treeClassName: 'tree1',
-			nodeClassName: 'node1',
 			templateUrl: 'tree/tree.html',
 			data: []
 		},
@@ -86,12 +84,6 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 			horizontalPosition: 'right', //left, middle, right
 			sticky: false
 		},
-		tabs: {
-      rootTemplatePath: rootTemplatePath,
-			defaultTab: 1,
-			ajaxBackgroundLoading: false, //todo
-			url: null //todo
-		},
 		extendText: {
       rootTemplatePath: rootTemplatePath,
 			hiddenInputName: null,
@@ -100,7 +92,7 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 			preventSubmitOnEnter: true,
 			data: [],
 			ngModel: null,
-      autoFocus: true,
+      autoFocus: false,
 			templateUrl: 'extend-text.html',
 			template: null
 		},
@@ -156,11 +148,8 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 			},
 			filter: function(){} //todo
 		},
-		resizable: {
-      rootTemplatePath: rootTemplatePath
-    },
-		expander: {
-      rootTemplatePath: rootTemplatePath
+    tabs: {
+      defaultTab: 0
     }
 	};
 
@@ -203,14 +192,6 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 		return angular.extend(defaults.tooltip, options);
 	};
 
-	this.getTabsOptions = function(options) {
-		return angular.extend(defaults.tabs, options);
-	};
-
-	this.getExpanderOptions = function(options) {
-		return angular.extend(defaults.expander, options);
-	};
-
 	this.getExtendTextOptions = function(options) {
 		var results = angular.extend(defaults.extendText, options);
 
@@ -229,7 +210,7 @@ nucleusAngular.service('nagDefaults', ['$injector', function($injector) {
 		return results;
 	};
 
-	this.getResizableOptions = function(options) {
-		return angular.extend(defaults.resizable, options);
+	this.getTabsOptions = function(options) {
+		return angular.extend(defaults.tabs, options);
 	};
 }]);
