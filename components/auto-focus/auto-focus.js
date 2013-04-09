@@ -1,4 +1,4 @@
-angular.module('nagAutoFocus', [])
+angular.module('nag.autoFocus', [])
 .directive('nagAutoFocus', ['$timeout', function($timeout) {
 	return {
 		restrict: 'A',

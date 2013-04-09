@@ -1,4 +1,4 @@
-angular.module('nagEllipse', [])
+angular.module('nag.ellipse', [])
 .filter('nagEllipse', function(){
 	return function(text, minLength, beginningShow, endingShow){
 		minLength = minLength || 17;

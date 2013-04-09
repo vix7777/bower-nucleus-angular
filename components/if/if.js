@@ -3,7 +3,7 @@
  * Originally created by @tigbro, for the @jquery-mobile-angular-adapter
  * https://github.com/tigbro/jquery-mobile-angular-adapter
  */
-angular.module('nagIf', [])
+angular.module('nag.if', [])
 .directive('nagIf', function() {
 	return {
 		transclude:'element',

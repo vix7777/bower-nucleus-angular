@@ -1,4 +1,4 @@
-angular.module('nagValidate.min', [])
+angular.module('nag.validate.min', [])
 .directive('nagValidateMin', ['nagDataValidation', function(nagDataValidation) {
 	return {
 		restrict: 'A',

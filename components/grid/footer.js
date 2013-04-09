@@ -1,4 +1,4 @@
-angular.module('nagGrid.footer', [])
+angular.module('nag.grid.footer', [])
 .directive('nagGridFooter', ['$compile', '$http', '$templateCache', 'nagHelper', 'nagDefaults', function($compile, $http, $templateCache, nagHelper, nagDefaults) {
 	var ngCell = {
 		restrict: 'A',

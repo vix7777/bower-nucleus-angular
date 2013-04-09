@@ -1,8 +1,8 @@
 /**
  * todo: add ajax supported tabs
  */
-angular.module('nagTabs', [
-  'nagCore'
+angular.module('nag.tabs', [
+  'nag.core'
 ])
 .directive('nagTabs', ['$timeout', '$http', '$compile', 'nagDefaults', function($timeout, $http, $compile, nagDefaults){
   return {

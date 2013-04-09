@@ -1,4 +1,4 @@
-angular.module('nagValidate.email', [])
+angular.module('nag.validate.email', [])
 .directive('nagValidateEmail', ['nagDataValidation', function(nagDataValidation) {
 	return {
 		restrict: 'A',

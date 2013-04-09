@@ -1,4 +1,4 @@
-angular.module('nagValidate.range', [])
+angular.module('nag.validate.range', [])
 .directive('nagValidateRange', ['nagDataValidation', function(nagDataValidation) {
 	return {
 		restrict: 'A',

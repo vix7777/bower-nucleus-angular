@@ -1,4 +1,4 @@
-angular.module('nagModal', [])
+angular.module('nag.modal', [])
 .service('nagModal', ['nagHelper', 'nagSiteOverlay', function(nagHelper, nagSiteOverlay) {
 	var self = this;
 	var content = '';

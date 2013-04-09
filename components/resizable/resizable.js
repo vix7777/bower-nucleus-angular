@@ -1,4 +1,4 @@
-angular.module('nagResizable', [])
+angular.module('nag.resizable', [])
 .directive('nagResizable', ['nagDefaults', function(nagDefaults) {
 	return {
 		restrict: 'A',

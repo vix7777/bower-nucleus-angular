@@ -1,4 +1,4 @@
-angular.module('nagValidate.required', [])
+angular.module('nag.validate.required', [])
 .directive('nagValidateRequired', ['nagDataValidation', function(nagDataValidation) {
 	return {
 		restrict: 'A',

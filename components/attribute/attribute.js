@@ -1,7 +1,7 @@
 /**
  * Allows you to dynamically add/remove attributes
  */
-angular.module('nagAttribute', [])
+angular.module('nag.attribute', [])
 .directive('nagAttribute', [function() {
     return function(scope, element, attributes) {
 			scope.$watch(attributes['nagAttribute'], function(newValue, oldValue) {

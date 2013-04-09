@@ -1,4 +1,4 @@
-angular.module('nagExpander', [])
+angular.module('nag.expander', [])
 .directive('nagExpander', ['$timeout', function($timeout){
 	return {
 		restrict: 'A',

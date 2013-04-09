@@ -1,5 +1,5 @@
-angular.module('nagExtendText', [
-  'nagCore'
+angular.module('nag.extendText', [
+  'nag.core'
 ])
 .directive('nagExtendText', ['$timeout', '$http', 'nagBeat', '$compile', 'nagHelper', 'nagDefaults', function($timeout, $http, nagBeat, $compile, nagHelper, nagDefaults){
 	return {

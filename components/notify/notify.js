@@ -2,7 +2,7 @@
  * todo:
  * test all position for absolute within element
  */
-angular.module('nagNotify', [])
+angular.module('nag.notify', [])
 .service('nagNotify', ['nagHelper', 'nagBeat', function(nagHelper, nagBeat) {
 	var self = this;
 

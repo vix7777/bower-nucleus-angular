@@ -1,4 +1,4 @@
-angular.module('nagGrid.headerDataCell', [])
+angular.module('nag.grid.headerDataCell', [])
 .directive('nagGridHeaderDataCell', ['$compile', '$http', '$templateCache', 'nagHelper', 'nagDefaults', function($compile, $http, $templateCache, nagHelper, nagDefaults) {
 	var ngCell = {
 		restrict: 'A',

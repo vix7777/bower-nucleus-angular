@@ -1,4 +1,4 @@
-angular.module('nagCore.defaults', [])
+angular.module('nag.core.defaults', [])
 .service('nagDefaults', ['$injector', function($injector) {
   var rootTemplatePath;
 

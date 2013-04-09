@@ -50,6 +50,6 @@
 		}
 	);
 
-	angular.module('nagDynamicEvent', [])
+	angular.module('nag.dynamicEvent', [])
   .directive(nagDynamicEventDirectives);
 }());

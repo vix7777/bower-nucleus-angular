@@ -1,4 +1,4 @@
-angular.module('nagBeat', [])
+angular.module('nag.beat', [])
 .service('nagBeat', ['$timeout', function($timeout) {
 	this.add = function(name, callback, delay, options) {
 		var self = this;

@@ -1,4 +1,4 @@
-angular.module('nagValidate.match', [])
+angular.module('nag.validate.match', [])
 .directive('nagValidateMatch', ['nagDataValidation', function(nagDataValidation) {
 	return {
 		restrict: 'A',

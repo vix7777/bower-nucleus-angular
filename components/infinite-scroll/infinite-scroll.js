@@ -1,4 +1,4 @@
-angular.module('nagInfiniteScroll', [])
+angular.module('nag.infiniteScroll', [])
 .directive('nagInfiniteScroll', function() {
     return function(scope, elm, attr) {
         var raw = elm[0];

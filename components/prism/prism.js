@@ -1,4 +1,4 @@
-angular.module('nagPrism', [])
+angular.module('nag.prism', [])
 .directive('nagPrism', ['$timeout', function($timeout) {
 	return {
 		restrict: 'A',

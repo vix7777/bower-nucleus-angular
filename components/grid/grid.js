@@ -11,8 +11,8 @@
  * todo: think: should we have either or both hitting esc of clicking outside the column-selection area hide it is the column selection area is showing?
  */
 
-angular.module('nagGrid.grid', [
-  'nagCore'
+angular.module('nag.grid', [
+  'nag.core'
 ])
 .directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper', 'nagDefaults', function($timeout, $http, $compile, nagHelper, nagDefaults){
 	return {

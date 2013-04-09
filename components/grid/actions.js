@@ -1,4 +1,4 @@
-angular.module('nagGrid.actions', [])
+angular.module('nag.grid.actions', [])
 .directive('nagGridActions', ['$compile', '$http', '$templateCache', 'nagHelper', 'nagDefaults', function($compile, $http, $templateCache, nagHelper, nagDefaults) {
 	var ngCell = {
 		restrict: 'A',

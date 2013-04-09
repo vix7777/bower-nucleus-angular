@@ -1,5 +1,5 @@
-angular.module('nagTree', [
-  'nagCore'
+angular.module('nag.tree', [
+  'nag.core'
 ])
 .directive('nagTree', ['$compile', 'nagHelper', 'nagDefaults', function($compile, nagHelper, nagDefaults) {
   return {

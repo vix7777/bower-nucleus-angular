@@ -2,8 +2,8 @@
  * todo: support ajax loading data
  * todo: support being able to hover over tooltip and keep it open without make it completely sticky
  */
-angular.module('nagTooltip', [
-  'nagCore'
+angular.module('nag.tooltip', [
+  'nag.core'
 ])
 .directive('nagTooltip', ['$compile', 'nagDefaults', function($compile, nagDefaults){
 	return {

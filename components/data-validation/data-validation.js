@@ -1,7 +1,7 @@
 /**
  * todo: add custom that will execute a custom function
  */
-angular.module('nagDataValidation', [])
+angular.module('nag.dataValidation', [])
 .service('nagDataValidation', [function() {
 	this.email = function(value){
 		var regex = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);

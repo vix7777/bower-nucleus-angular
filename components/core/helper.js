@@ -1,4 +1,4 @@
-angular.module('nagCore.helpers', [])
+angular.module('nag.core.helpers', [])
 .service('nagHelper', ['$templateCache', 'nagDefaults', function($templateCache, nagDefaults) {
 	this.getAsyncTemplate = function(templateUrl) {
 		//todo: figure out if there is a way to using $http instead of jQuery $.ajax with async false without having the render of initial load

@@ -1,4 +1,4 @@
-angular.module('nagSiteOverlay', [])
+angular.module('nag.siteOverlay', [])
 .service('nagSiteOverlay', [function() {
 	var self = this;
 	var enableCount = 0
