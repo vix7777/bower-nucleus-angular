@@ -18,13 +18,13 @@ angular.module('nag.tooltip', [
 					var template = $('<div>' + $(element).html() + '</div>');
 
 					if(scope.options.sticky !== true) {
-						template.find('.handle').attr('ng-mouseenter', 'showTooltip()');
-						template.find('.handle').attr('ng-mouseleave', 'hideTooltip()');
+						template.find('.nag-handle').attr('ng-mouseenter', 'showTooltip()');
+						template.find('.nag-handle').attr('ng-mouseleave', 'hideTooltip()');
 					} else {
-						template.find('.handle').attr('ng-click', 'toggleTooltip()');
+						template.find('.nag-handle').attr('ng-click', 'toggleTooltip()');
 					}
 
-					template.find('.content').attr('ng-hide', '!contentVisible');
+					template.find('.nag-content').attr('ng-hide', '!contentVisible');
 					$(element).html($compile(template)(scope));
 					$(element).addClass('nag-tooltip');
 
@@ -32,8 +32,8 @@ angular.module('nag.tooltip', [
 				post: function(scope, element, attributes) {
 					var $handle, $content, getTop, getLeft, defaults, setTooltipPosition;
 
-					$handle = $(element).find('.handle');
-					$content = $(element).find('.content');
+					$handle = $(element).find('.nag-handle');
+					$content = $(element).find('.nag-content');
 
 					getTop = function() {
 						var top, offset, returnValue;
@@ -86,7 +86,7 @@ angular.module('nag.tooltip', [
 							left: getLeft()
 						};
 
-						$(element).find('.content').css(css);
+						$(element).find('.nag-content').css(css);
 						$content.css('display', 'inherit');
 					};
 

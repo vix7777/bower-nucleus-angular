@@ -1,5 +1,5 @@
-<div ng-class="{hide: !options.displaySettings}" class="settings-widget">
-	<ul class="list-unstyled">
+<div ng-class="{'nag-hide': !options.displaySettings}" class="nag-settings-widget">
+	<ul>
 		<li ng-show="options.rowSelectable">
 			<input type="checkbox" ng-checked="options.rowSelectableCheckbox" ng-click="options.rowSelectableCheckbox = !options.rowSelectableCheckbox" />
 		</li>

@@ -20,7 +20,7 @@ angular.module('nag.tree', [
           scope.treeClick = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
-            $($event.currentTarget).toggleClass('expanded');
+            $($event.currentTarget).toggleClass('nag-tree-expanded');
           }
 
           scope.nodeClick = function($event, nodeData) {

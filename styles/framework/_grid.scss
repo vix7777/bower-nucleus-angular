@@ -16,44 +16,44 @@
 	min-height: 75px;
 }
 
-.nag-grid .grid-header {
+.nag-grid .nag-grid-header {
 	@include user-select('none');
 	padding: 5px;
 }
 
-.nag-grid .data-header > li,
-.nag-grid .record-item > li {
+.nag-grid .nag-data-header > li,
+.nag-grid .nag-record-item > li {
 	height: 16px;
 }
 
-.nag-grid .data-header {
+.nag-grid .nag-data-header {
 	@include user-select('none');
 }
 
-.nag-grid .grid-header .settings {
+.nag-grid .nag-grid-header .nag-settings {
 	display: inline-block;
 	float: right;
 	cursor: pointer;
 }
 
-.nag-grid .grid-header .settings:after {
+.nag-grid .nag-grid-header .nag-settings:after {
 	content: "\e007";
 }
 
-.nag-grid .data {
+.nag-grid .nag-data {
 	position: relative;
 	overflow: auto;
 	width: 100%;
 }
 
-.nag-grid .data.selectable {
+.nag-grid .nag-data.nag-selectable {
 	@include user-select('none');
 	cursor: pointer;
 }
 
-.nag-grid .data .data-header [class*="sort-"]:after,
-.nag-grid .grid-header .settings:after,
-.nag-grid .data .data-header .sortable:after {
+.nag-grid .nag-data .nag-data-header [class*="nag-sort-"]:after,
+.nag-grid .nag-grid-header .nag-settings:after,
+.nag-grid .nag-data .nag-data-header .nag-sortable:after {
 	font-family: 'nag-icon-fonts';
 	font-style: normal;
 	speak: none;
@@ -65,57 +65,57 @@
   text-align: center;
 }
 
-.nag-grid .data .data-header .sort-desc:after {
+.nag-grid .nag-data .nag-data-header .nag-sort-desc:after {
 	content: "\e004";
 }
 
-.nag-grid .data .data-header .sort-asc:after {
+.nag-grid .nag-data .nag-data-header .nag-sort-asc:after {
 	content: "\e005";
 }
 
-.nag-grid .data .data-header .sortable {
+.nag-grid .nag-data .nag-data-header .nag-sortable {
 	cursor: pointer;
 }
 
-.nag-grid .data .data-header .sortable:not([class*="sort-"]):after {
+.nag-grid .nag-data .nag-data-header .nag-sortable:not([class*="nag-sort-"]):after {
 	content: "\e006";
 }
 
-.nag-grid .data .data-header .text {
+.nag-grid .nag-data .nag-data-header .nag-text {
 	display: inline-block;
   padding-right: 5px;
 }
 
-.nag-grid .data > ul li {
+.nag-grid .nag-data > ul li {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
 }
 
-.nag-grid .data > ul {
+.nag-grid .nag-data > ul {
 	border-top: 1px solid black;
 	display: inline-block;
 	white-space: nowrap;
 	width: 100%;
 }
 
-.nag-grid .data > ul:last-of-type {
+.nag-grid .nag-data > ul:last-of-type {
 	border-bottom: 1px solid black;
 }
 
-.nag-grid .data > ul li {
+.nag-grid .nag-data > ul li {
 	border-right: 1px solid black;
 	padding: 3px;
 }
 
-.nag-grid .data > ul li:last-child {
+.nag-grid .nag-data > ul li:last-child {
 	border-right:  none;
 }
 
-.nag-grid .controls a,
-.nag-grid .controls span[class^="font-icon-"],
-.nag-grid .controls span,
-.nag-grid .controls input {
+.nag-grid .nag-controls a,
+.nag-grid .nag-controls span[class^="font-icon-"],
+.nag-grid .nag-controls span,
+.nag-grid .nag-controls input {
 	vertical-align: middle;
 	text-decoration: none;
 	color: $color-black;
@@ -125,12 +125,12 @@
 	padding: 6px 5px 5px 5px;
 }
 
-.nag-grid .grid-wrapper {
+.nag-grid .nag-grid-wrapper {
 	position: relative;
 	box-sizing: border-box;
 }
 
-.nag-grid .loading {
+.nag-grid .nag-loading {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -139,7 +139,7 @@
 	background-color: rgba(0, 0, 0, .5);
 }
 
-.nag-grid .loading .text {
+.nag-grid .nag-loading .nag-text {
 	@include border-radius(10px);
 	margin: 20px auto 0 auto;
 	width: 53px;
@@ -148,7 +148,7 @@
 
 }
 
-.nag-grid .settings-widget {
+.nag-grid .nag-settings-widget {
 	position: absolute;
 	top: 5px;
 	right: 5px;

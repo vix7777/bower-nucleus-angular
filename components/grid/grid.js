@@ -11,8 +11,9 @@
  * todo: think: should we have either or both hitting esc of clicking outside the column-selection area hide it is the column selection area is showing?
  */
 
-angular.module('nag.grid', [
-  'nag.core'
+angular.module('nag.grid.grid', [
+  'nag.core',
+  'nag.grid'
 ])
 .directive('nagGrid', ['$timeout', '$http', '$compile', 'nagHelper', 'nagDefaults', function($timeout, $http, $compile, nagHelper, nagDefaults){
 	return {
@@ -34,10 +35,10 @@ angular.module('nag.grid', [
 					var autoResizeGridColumns, resizableGrid, getData;
 					autoResizeGridColumns = function() {
             var minWidth;
-						var columnCount = $(element).find('.data .data-header .cell').length;
+						var columnCount = $(element).find('.nag-data .nag-data-header .nag-cell').length;
 
 						for(var x = 0; x <= columnCount; x += 1) {
-							var property = $(element).find('.data .data-header .cell:eq(' + x + ')').data('property');
+							var property = $(element).find('.nag-data .nag-data-header .nag-cell:eq(' + x + ')').data('property');
 
 							if(property) {
 								var columnModel = ObjectArray.getObjectByPropertyValue(scope.options.columnModel, 'property', property);
@@ -45,7 +46,7 @@ angular.module('nag.grid', [
 								if(columnModel.width === 0) {
 									minWidth = (scope.options.minColumnWidth >= columnModel.minWidth ? scope.options.minColumnWidth : columnModel.minWidth);
 									var maxWidth = (scope.options.maxColumnWidth >= columnModel.maxWidth ? scope.options.maxColumnWidth : columnModel.maxWidth);
-									var $cells = $(element).find('.data .row .cell.' + columnModel.property);
+									var $cells = $(element).find('.nag-data .nag-row .nag-cell.' + columnModel.property);
 
 									$.each($cells, function(key, value) {
 										minWidth = (minWidth < $(value).width() ? $(value).width() : minWidth);
@@ -58,16 +59,16 @@ angular.module('nag.grid', [
 									minWidth = columnModel.width;
 								}
 
-								$(element).find('.data .row .cell.' + columnModel.property).width(minWidth);
-							} else if ($(element).find('.data .data-header .cell:eq(' + x + ')').hasClass('grid-actions-column')) {
+								$(element).find('.nag-data .nag-row .nag-cell.' + columnModel.property).width(minWidth);
+							} else if ($(element).find('.nag-data .nag-data-header .nag-cell:eq(' + x + ')').hasClass('nag-grid-actions-column')) {
                 minWidth = 0;
-                var $cells = $(element).find('.data .row .cell.grid-actions-column');
+                var $cells = $(element).find('.nag-data .nag-row .nag-cell.nag-grid-actions-column');
 
                 $.each($cells, function(key, value) {
                   minWidth = (minWidth < $(value).width() ? $(value).width() : minWidth);
                 });
 
-								$(element).find('.data .row .cell.grid-actions-column').width(minWidth);
+								$(element).find('.nag-data .nag-row .nag-cell.nag-grid-actions-column').width(minWidth);
               }
 						}
 
@@ -81,8 +82,8 @@ angular.module('nag.grid', [
 					scope.autoResize = autoResizeGridColumns;
 
 					resizableGrid = function() {
-						angular.forEach($(element).find('.data .row'), function(row, key) {
-							angular.forEach($(row).find('.cell'), function(cell, key) {
+						angular.forEach($(element).find('.nag-data .nag-row'), function(row, key) {
+							angular.forEach($(row).find('.nag-cell'), function(cell, key) {
 								var property = $(cell).data('property');
 
 								if(property) {
@@ -100,13 +101,13 @@ angular.module('nag.grid', [
 											maxWidth = null;
 										}
 
-										$(element).find('.data .row .cell.' + columnModel.property).resizable({
+										$(element).find('.nag-data .nag-row .nag-cell.' + columnModel.property).resizable({
 											handles: 'e',
 											minWidth: minWidth,
 											maxWidth: maxWidth
 										});
 										$(cell).resize(function() {
-											$(element).find('.data .row .cell.' + columnModel.property).width($(this).width());
+											$(element).find('.nag-data .nag-row .nag-cell.' + columnModel.property).width($(this).width());
 										});
 									}
 								}
@@ -260,11 +261,11 @@ angular.module('nag.grid', [
 								scope.sortOrder.push(property);
 							}
 
-							$(element).find('.data .data-header .sortable').removeClass('sort-asc').removeClass('sort-desc');
+							$(element).find('.nag-data .nag-data-header .nag-sortable').removeClass('nag-sort-asc').removeClass('nag-sort-desc');
 
 							for(sortKey in scope.options.sort) {
-								fontIconClass = (scope.options.sort[sortKey] === 'asc' ? 'sort-asc' : 'sort-desc')
-								$(element).find('.data .data-header .' + sortKey + ' .sortable').addClass(fontIconClass);
+								fontIconClass = (scope.options.sort[sortKey] === 'asc' ? 'nag-sort-asc' : 'nag-sort-desc')
+								$(element).find('.nag-data .nag-data-header .' + sortKey + ' .nag-sortable').addClass(fontIconClass);
 							}
 
 							if(scope.options.currentPage !== 1) {
@@ -317,7 +318,7 @@ angular.module('nag.grid', [
 							scope.options.currentPage = 1;
 						}
 
-						$(element).find('.set-page-link').val(scope.options.currentPage);
+						$(element).find('.nag-set-page-link').val(scope.options.currentPage);
 						getData();
 					});
 
@@ -326,7 +327,7 @@ angular.module('nag.grid', [
 					scope.sortOrder = [];
 
 					$timeout(function(){
-						$(element).find('.settings-widget').css('top', $(element).find('.grid-header').outerHeight(true) + 5);
+						$(element).find('.nag-settings-widget').css('top', $(element).find('.nag-grid-header').outerHeight(true) + 5);
 					}, 0);
 				}
 			};

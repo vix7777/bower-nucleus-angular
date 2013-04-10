@@ -1,20 +1,20 @@
 /* tree system */
 .nag-tree > ul,
-.tree > ul {
+.nag-tree .nag-tree-element > ul {
 	padding: 0;
 	list-style: none;
 }
 
-.tree {
+.nag-tree .nag-tree-element {
   cursor: pointer;
 }
 
-.tree .leaf-value {
+.nag-tree .nag-tree-element .nag-leaf-value {
   padding-left: 14px;
 }
 
-.nag-tree .tree > .tree-label:before,
-.nag-tree .tree.expanded > .tree-label:before {
+.nag-tree .nag-tree-element> .nag-tree-label:before,
+.nag-tree .nag-tree-element.nag-tree-expanded > .nag-tree-label:before {
 	font-family: 'nag-icon-fonts';
 	font-style: normal;
 	speak: none;
@@ -25,28 +25,27 @@
   display: inline-block;
 }
 
-.tree > .tree-label {
+.nag-tree .nag-tree-element > .nag-tree-label {
   padding-left: 14px;
   padding-right: 1px;
 }
 
-.tree > .tree-label:before {
+.nag-tree .nag-tree-element > .nag-tree-label:before {
 	content: "\e00a";
 }
 
-.tree.expanded > .tree-label:before {
+.nag-tree .nag-tree-element.nag-tree-expanded > .nag-tree-label:before {
 	content: "\e009";
 }
 
-.tree .node {
-
+.nag-tree .nag-tree-element .nag-node {
   padding-left: 14px;
 }
 
-.tree > ul.node {
+.nag-tree .nag-tree-element > ul.nag-node {
   display: none;
 }
 
-.tree.expanded > ul.node {
+.nag-tree .nag-tree-element.nag-tree-expanded > ul.nag-node {
   display: block;
 }
