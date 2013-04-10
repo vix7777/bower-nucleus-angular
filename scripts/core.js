@@ -42,6 +42,7 @@ angular.module('nag', [
   'nag.notify',
   'nag.prism',
   'nag.siteOverlay',
+  'nag.siteLoader',
   'nag.tabs',
   'nag.tooltip',
   'nag.tree',
