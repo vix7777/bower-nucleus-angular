@@ -5,7 +5,13 @@
   height: 100%;
   width: 100%;
   background-color: $color-white;
-  z-index: 1000;
+  z-index: 10000;
+}
+
+.nag-non-blocking-loader .nag-message {
+  border-top: none;
+  padding: 0.25em 0.5em;
+  @include border-bottom-radius(10px);
 }
 
 .nag-site-loader-text {
