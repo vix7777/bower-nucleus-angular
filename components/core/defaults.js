@@ -1,5 +1,5 @@
 angular.module('nag.core.defaults', [])
-.service('nagDefaults', ['$injector', function($injector) {
+.factory('nagDefaults', ['$injector', function($injector) {
   var rootTemplatePath;
 
   //figure out the default root template path
@@ -166,52 +166,54 @@ angular.module('nag.core.defaults', [])
   }
   catch(exception) {}
 
-	this.getGridOptions = function(options) {
-		var newOptions = angular.extend(defaults.grid, options);
+    return {
+	    getGridOptions: function(options) {
+            var newOptions = angular.extend(defaults.grid, options);
 
-		if(angular.isArray(options.columnModel) && options.columnModel.length > 0) {
-			options.columnModel = this.getGridColumnOptions(options.columnModel);
-		}
+            if(angular.isArray(options.columnModel) && options.columnModel.length > 0) {
+                options.columnModel = this.getGridColumnOptions(options.columnModel);
+            }
 
-		return newOptions;
-	};
+            return newOptions;
+        },
 
-	this.getGridColumnOptions = function(columnModel) {
-		angular.forEach(columnModel, function(value, key) {
-			//todo: research: this breaks without the JSON.parse(angular.toJson()), no idea why
-			columnModel[key] = angular.extend(JSON.parse(angular.toJson(defaults.gridColumnModel)), columnModel[key]);
-		});
+        getGridColumnOptions: function(columnModel) {
+            angular.forEach(columnModel, function(value, key) {
+                //todo: research: this breaks without the JSON.parse(angular.toJson()), no idea why
+                columnModel[key] = angular.extend(JSON.parse(angular.toJson(defaults.gridColumnModel)), columnModel[key]);
+            });
 
-		return columnModel;
-	};
+            return columnModel;
+        },
 
-	this.getTreeOptions = function(options) {
-		return angular.extend(defaults.tree, options);
-	};
+        getTreeOptions: function(options) {
+            return angular.extend(defaults.tree, options);
+        },
 
-	this.getTooltipOptions = function(options) {
-		return angular.extend(defaults.tooltip, options);
-	};
+        getTooltipOptions: function(options) {
+            return angular.extend(defaults.tooltip, options);
+        },
 
-	this.getExtendTextOptions = function(options) {
-		var results = angular.extend(defaults.extendText, options);
+        getExtendTextOptions: function(options) {
+            var results = angular.extend(defaults.extendText, options);
 
-		if(results.tagOptions) {
-			results.tagOptions = angular.extend(defaults.extendTextTagOptions, results.tagOptions);
-		} else {
-			results.tagOptions = defaults.extendTextTagOptions
-		}
+            if(results.tagOptions) {
+                results.tagOptions = angular.extend(defaults.extendTextTagOptions, results.tagOptions);
+            } else {
+                results.tagOptions = defaults.extendTextTagOptions
+            }
 
-		if(results.autoCompleteOptions) {
-			results.autoCompleteOptions = angular.extend(defaults.extendTextAutoCompleteOptions, results.autoCompleteOptions);
-		} else {
-			results.autoCompleteOptions = defaults.extendTextAutoCompleteOptions
-		}
+            if(results.autoCompleteOptions) {
+                results.autoCompleteOptions = angular.extend(defaults.extendTextAutoCompleteOptions, results.autoCompleteOptions);
+            } else {
+                results.autoCompleteOptions = defaults.extendTextAutoCompleteOptions
+            }
 
-		return results;
-	};
+            return results;
+        },
 
-	this.getTabsOptions = function(options) {
-		return angular.extend(defaults.tabs, options);
-	};
+        getTabsOptions: function(options) {
+            return angular.extend(defaults.tabs, options);
+        }
+}
 }]);
