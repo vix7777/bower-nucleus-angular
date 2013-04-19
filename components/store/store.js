@@ -3,32 +3,32 @@
  */
 angular.module('nag.store', [])
 .factory('nagStore', [function() {
-    return {
-        get: function(key) {
-            var now = (new Date()).getTime();
-            var storedData = store.get(key);
+  return {
+    get: function(key) {
+      var now = (new Date()).getTime();
+      var storedData = store.get(key);
 
-            if(storedData && storedData.expires && storedData.expires < now) {
-                //make sure the data is removed from the store
-                store.remove(key);
+      if(storedData && storedData.expires && storedData.expires < now) {
+        //make sure the data is removed from the store
+        store.remove(key);
 
-                //return undefined as if the data was not in the store
-                storedData = undefined;
-            }
+        //return undefined as if the data was not in the store
+        storedData = undefined;
+      }
 
-            return storedData;
-        },
+      return storedData;
+    },
 
-        set: function(key, value, expire) {
-            //determine expires
-            var expires = (new Date()).getTime();
-            expires = (expire ? expires + expire : false);
-            var data = {
-                value: value,
-                expires: expires
-            }
+    set: function(key, value, expire) {
+      //determine expires
+      var expires = (new Date()).getTime();
+      expires = (expire ? expires + expire : false);
+      var data = {
+        value: value,
+        expires: expires
+      }
 
-            return store.set(key, data);
-        }
+      return store.set(key, data);
     }
+  }
 }]);

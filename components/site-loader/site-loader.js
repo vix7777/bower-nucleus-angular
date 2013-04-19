@@ -1,8 +1,10 @@
 angular.module('nag.siteLoader', [
   'nag.notify'
 ])
-.factory('nagSiteLoader', ['nagNotify', function(nagNotify) {
-  var nagNotifyId = null;
+.factory('nagSiteLoader', [
+  'nagNotify',
+  function(nagNotify) {
+    var nagNotifyId = null;
     return {
       enableBlocking: function(html) {
         if(!html) {
@@ -51,4 +53,5 @@ angular.module('nag.siteLoader', [
         }
       }
     }
-}]);
+  }
+]);

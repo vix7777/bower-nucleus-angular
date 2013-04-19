@@ -1,7 +1,8 @@
 {
   "name": "nucleus-angular",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "dependencies": {
+    "object-array-utility": "0.1.x",
     "store.js": "1.3.x",
     "json3": "3.2.x"
   },

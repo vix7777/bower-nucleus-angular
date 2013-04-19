@@ -1,6 +1,6 @@
 <span ng-class="{'nag-tree-label': hasNodes(data), 'nag-leaf-value': !hasNodes(data)}">
-	{{ data.name }}
+  {{ data.name }}
 </span>
 <ul class="nag-node">
-	<li ng-repeat="data in data.nodes" ng-class="{'nag-tree-element': hasNodes(data), 'nag-node': !hasNodes(data)}" nag-click="{'treeClick($event)': hasNodes(data), 'nodeClick($event, data)': !hasNodes(data)}" ng-include="options.rootTemplatePath + 'tree/recursion.html'"></li>
+  <li ng-repeat="data in data.nodes" ng-class="{'nag-tree-element': hasNodes(data), 'nag-node': !hasNodes(data)}" nag-click="{'treeClick($event)': hasNodes(data), 'nodeClick($event, data)': !hasNodes(data)}" ng-include="options.rootTemplatePath + 'tree/recursion.html'"></li>
 </ul>

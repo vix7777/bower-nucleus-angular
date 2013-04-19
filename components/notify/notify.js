@@ -3,7 +3,10 @@
  * test all position for absolute within element
  */
 angular.module('nag.notify', [])
-.factory('nagNotify', ['nagHelper', 'nagBeat', function(nagHelper, nagBeat) {
+.factory('nagNotify', [
+  'nagHelper',
+  'nagBeat',
+  function(nagHelper, nagBeat) {
     return {
       notify: function(options) {
         var self = this;
